@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/23 10:53:44 by fcullen           #+#    #+#             */
-/*   Updated: 2022/11/23 11:00:22 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:28:27 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,24 @@ void	ft_lstclear(t_list *lst)
 		free(tmp);
 	}
 	free(lst);
+}
+
+// Check integer boundaries
+int	int_check(t_list **a)
+{
+	t_list *lst = *a;
+
+	while (lst)
+	{
+		printf("%lld ", lst->content);
+		lst = lst->next;
+	}
+	lst = *a;
+	while (lst)
+	{
+		if (lst->content >= 2147483647ll || lst->content <= -2147483648ll)
+			return (1);
+		lst = lst->next;
+	}
+	return (0);
 }

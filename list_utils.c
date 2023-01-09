@@ -6,14 +6,14 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:18:35 by fcullen           #+#    #+#             */
-/*   Updated: 2022/11/23 10:53:40 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:45:05 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // Create new list element with content
-t_list	*ft_lstnew(int content)
+t_list	*ft_lstnew(long long content)
 {
 	t_list	*new;
 

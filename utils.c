@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:03:16 by fcullen           #+#    #+#             */
-/*   Updated: 2022/11/23 16:54:22 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:30:18 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+long long	ft_atol(const char *str)
 {
-	int	i;
-	int	sign;
-	int	result;
+	int			i;
+	long long		sign;
+	long long	result;
 
 	i = 0;
 	sign = 1;
@@ -84,14 +84,13 @@ char	*ft_strdup(const char *s1)
 int	dup_check(t_list **a)
 {
 	int	*array;
-	int arr_len;
+	int	arr_len;
 	int	i;
 	int	j;
 
 	i = 0;
 	array = lst_to_arr(*a);
 	arr_len = ft_lstsize(*a);
-	// printf("%d\n", arr_len);
 	while (i < arr_len)
 	{
 		j = 0;

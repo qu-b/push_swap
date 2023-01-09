@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:47:49 by fcullen           #+#    #+#             */
-/*   Updated: 2022/11/23 11:23:56 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/01/06 19:45:20 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 typedef struct s_list
 {
-	int				content;
+	long long		content;
 	struct s_list	*next;
 }					t_list;
 
@@ -42,7 +42,7 @@ void	ft_rrotate(t_list **a);
 void	ft_lstpush(t_list **a, t_list **b);
 
 // List Utilities
-t_list	*ft_lstnew(int content);
+t_list	*ft_lstnew(long long content);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
@@ -77,13 +77,13 @@ void	print_solution(t_list *l);
 void	print_sol(t_list *l);
 
 // Utilities
-int		ft_atoi(const char *str);
+long long	ft_atol(const char *str);
 char	**ft_split(char *str, char c);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlen(const char *s);
 void	ft_free_split(char **arr);
 int		dup_check(t_list **a);
-
+int		int_check(t_list **lst);
 
 #endif

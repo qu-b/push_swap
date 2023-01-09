@@ -6,7 +6,7 @@
 /*   By: fcullen <fcullen@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 10:02:09 by fcullen           #+#    #+#             */
-/*   Updated: 2022/11/23 10:52:10 by fcullen          ###   ########.fr       */
+/*   Updated: 2023/01/06 16:59:07 by fcullen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ int	minpos(t_list *a, int min)
 	if (min == ft_lstlast(a)->content)
 		pos = ft_lstsize(a) - 1;
 	else
+	{
 		while (a)
 		{
 			if (min == a->content)
@@ -43,6 +44,7 @@ int	minpos(t_list *a, int min)
 			pos++;
 			a = a->next;
 		}
+	}
 	return (pos);
 }
 
